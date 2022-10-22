@@ -1,0 +1,36 @@
+00: Bomb
+01: Fireball
+02: Missile
+03: Turbo
+04: Jump
+05: Crazy Mushroom
+06: Stealth Field
+07: Big Bigger, Biggest!
+08: Tiny, Tiny, Tiny!
+09: Oil Slick
+0A: Pandora's Box
+0B: Dynamite
+0C: Super Shield
+0D: ?
+0E: Wonder Clock
+0F: 32t Weight
+10: Power Up
+11: ?
+
+Two missing are:
+2nd Boost | Magic Hand
+
+Wheel List Base Address: 0x8008d0c0
+Wheels Instances Base Address: 0x800E3960
+
+Wheel Instances Freeplay (Counter Clockwise):
+03, 00, 10, 04, 0A, 09, 02, 06
+03, 00, 10, 04, 0E, 08, 01, 0B
+03, 00, 10, 04, 0C, 05, 07, 0F
+03, 12, 08, 0F, 13, 04, 14, 02 // 2 player only?
+
+
+Wheel Instances Single Race (Counter Clockwise)
+0A, 00, 09, 06, 04, 01, 02, 03
+0E, 00, 07, 06, 04, 01, 02, 03
+01, 03, 00, 0C, 04, 0B, 09, 10

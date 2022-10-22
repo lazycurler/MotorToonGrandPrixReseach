@@ -1,0 +1,20 @@
+Toon Island II
+ FL(t1) = 0x5562e = 349,742
+ CP(v1) = 0x2b0a3 = 176,291
+
+Toon Village
+ FL(t1) = 0x7075d = 460,637
+   half = 0x038ae = 230,318
+ CP(v1) = 0x2d66e = 185,996
+
+Crazy Coaster
+ FL(t1) = 0x6ff03 = 458,499
+ CP(v1) = 0x39e0a = 237,006
+
+Gulliver House II
+ FL(t1) = 0x756c7 = 480,967
+ CP(v1) = 0x3396a = 211,306
+
+Haunted Castle
+ FL(t1) = 0x51f0e = 335,630
+ CP(v1) = 0x2b289 = 176,777
