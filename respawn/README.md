@@ -44,7 +44,7 @@ Using the knowledge and mechanics above, a lap skip can be performed. Lap skips 
 
 # Forward Warping Diagram
 This image shows the maximum possible lap skip distance (~half a track) and shows some example of the above calculations.
-https://i.imgur.com/t8AoyIg.png
+![annotated_shortcut](./allowable_shortcuts_annotated.png)
 
 
 I hope this proves useful, or at the very least entertaining. I had a lot of fun digging through the code to figure all this out. If anyone is interested in doing some exploit hunting I can post track lengths along with other relevant memory addresses. For map exploration, I've found that freezing the item memory address `0x800DC3CB` with the jump item `0x04` makes moving around the map extremely easy. Any questions or suggestions (for this game and others) are welcome!
