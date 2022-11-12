@@ -150,9 +150,9 @@ def wheelsLookup(lap_count, halfway, race_pos, no_print=False):
     if not no_print:
         stats_strings.sort()
         for stat in stats_strings:
-            print(f'+----------------------+----------+')
+            print(f'+-----------------------+----------+')
             print(stat)
-        print(f'+---------------------------------+')
+        print(f'+----------------------------------+')
         print(f'--------------------------------------------------------------------------------')
 
     print(item_info)
@@ -253,7 +253,7 @@ def main():
     for item_id, item_name in ITEM_DICT.items():
         if '2 Player' in item_name:
             continue # skip 2 Player only items
-        generate_graph(raw_stats, item_id, show_graph=True, save_graph=True)
+        generate_graph(raw_stats, item_id, show_graph=True, save_graph=False)
 
 if __name__ == "__main__":
     main()
