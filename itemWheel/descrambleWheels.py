@@ -170,12 +170,12 @@ def generate_graph(stats, item, save_graph=True, show_graph=False):
     :param save_graph: If True, graph will be saved to a "graphs" directory in the cwd
     :param show_graph: If True, will display graph to user
     """
-    graph_data = np.zeros(shape=(9,6), dtype=float)
+    graph_data = np.zeros(shape=(10,6), dtype=float)
     for race_prog_int in range(6):
-        for race_pos in range(1, 10):
+        for race_pos in range(0, 10):
             race_prog = race_prog_int / 2.0
             item_chance = stats.get((race_prog, race_pos, item), 0.0) / float(NUM_WHEELS)
-            graph_data[race_pos-1][race_prog_int] = np.float64(item_chance)
+            graph_data[race_pos][race_prog_int] = np.float64(item_chance)
 
     # discrete color scheme
     ctf = 255.0 # color int to float
@@ -197,8 +197,12 @@ def generate_graph(stats, item, save_graph=True, show_graph=False):
     for j, lab in enumerate(['$0\%$','$33.3\%$','$66.6\%$','$100\%$']):
         cbar.ax.text(1.1, (2 * j + 1) / 8.0, lab, ha='left', va='center')
 
-    # Turn spines off and create white grid.
+    # Turn spines off and create black (major) grid with border
     ax.grid(which='major', color="black", linestyle='-', linewidth=2)
+    ax.set_xticks(np.arange(graph_data.shape[1]), np.arange(graph_data.shape[1]))
+    ax.set_yticks(np.arange(graph_data.shape[0]), np.arange(graph_data.shape[0]))
+    ax.patch.set_edgecolor('black')
+    ax.patch.set_linewidth('2')
 
     # hacky way to remove minor major ticks
     ax.tick_params(axis='both', which='major', colors='white')
@@ -210,7 +214,7 @@ def generate_graph(stats, item, save_graph=True, show_graph=False):
 
     # Update lables to be the correct base and format
     ax.set_xticklabels(np.arange(1, 4, 0.5, dtype=float), minor=True)
-    ax.set_yticklabels(np.arange(1, 10), minor=True)
+    ax.set_yticklabels(np.arange(0, 10), minor=True)
 
     # Generate title and filename
     item_name = ITEM_DICT[item]
